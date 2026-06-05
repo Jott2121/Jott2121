@@ -1,16 +1,16 @@
 # Jeff Otterson
 
-**I build and *operate* production AI agent systems — always-on, self-healing, ~$0/mo over a plan I already pay for. I also wrote the doctrine for orchestrating agent fleets (Fleet Mode).**
+**I build and *operate* production AI agent systems — like [Bow](https://github.com/Jott2121/bow), an always-on, self-healing chief-of-staff that runs at ~$0/mo over a plan I already pay for.**
 
 ---
 
 ## What I build
 
-Production agent infrastructure and applied ML/data tools that run, not slide decks. What I bring is the architecture and the gates rather than the typing: I design the system, then direct fleets of Claude (Opus 4.8) subagents to implement and adversarially review every piece, and nothing ships until a deterministic check and an independent reviewer both pass. I'd rather show the build and the failure I caught than a polished demo.
+Production agent infrastructure and applied ML/data tools that run, not slide decks. What I bring is the architecture and the gates: I design the system, then direct fleets of Claude (Opus 4.8) subagents to implement and adversarially review every piece — nothing ships until a deterministic check and an independent reviewer both pass. I'd rather show the build and the failure I caught than a polished demo.
 
 ## Featured
 
-### [bow](https://github.com/Jott2121/bow) — flagship
+### [Bow](https://github.com/Jott2121/bow) — flagship
 An all-Claude (Opus 4.8) chief-of-staff agent I architected, built, and run — reachable from my phone, at ≈ $0/mo marginal cost. A single always-on daemon wraps the headless `claude -p` CLI as first-party usage, routes phone messages, runs autonomous builds, fires scheduled routines, and self-heals. Built and adversarially reviewed by fleets of Claude subagents I directed and gated; an independent QC pass caught a soft-lock the happy-path tests never saw. Sanitized engineering case study — receipts over hype.
 
 ### [ai-career-threat-index](https://github.com/Jott2121/ai-career-threat-index)
