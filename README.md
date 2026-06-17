@@ -13,25 +13,30 @@ Production agent infrastructure and applied ML/data tools that run, not slide de
 ### [Bow](https://github.com/Jott2121/bow) — flagship
 An all-Claude (Opus 4.8) chief-of-staff agent I architected, built, and run — reachable from my phone, at ≈ $0/mo marginal cost. A single always-on daemon wraps the headless `claude -p` CLI as first-party usage, routes phone messages, runs autonomous builds, fires scheduled routines, and self-heals. Built and adversarially reviewed by fleets of Claude subagents I directed and gated; an independent QC pass caught a soft-lock the happy-path tests never saw. Sanitized engineering case study — receipts over hype.
 
-### [ai-career-threat-index](https://github.com/Jott2121/ai-career-threat-index)
-Open dataset of AI displacement risk across 76 professions — a transparent three-factor methodology, quarterly review, MIT licensed.
+### [agent-gate](https://github.com/Jott2121/agent-gate)
+A fail-closed quality gate for agent workflows, shipped as an installable MCP server (`pip install mcp-agent-gate`). Work doesn't pass on a hope — it passes a deterministic check, and every run writes a hash-chained, tamper-evident receipt. 17 tests, including tests that exercise the MCP tools, not just import them.
 
-### [attrition-risk-ml](https://github.com/Jott2121/attrition-risk-ml)
+### [rag-guard](https://github.com/Jott2121/rag-guard)
+A guarded RAG pipeline that refuses when the retrieved context doesn't support an answer: groundedness check, PII redaction, and an eval harness. Published eval run with its misses named instead of hidden — refusal accuracy 0.90, grounded rate 0.88. Stdlib core, bring your own model.
+
+### [agent-cost-attribution](https://github.com/Jott2121/agent-cost-attribution)
+A token-efficiency meter and playbook for agentic coding: a per-stage token/$ waterfall, plus a detector for runs that report success while silently broken. Cut one workflow's cost by 67%. Honest part: the meter overturned my own plan — I assumed Fetch was the cost whale; the telemetry proved it was the verify step.
+
+### [attrition-risk-ml](https://github.com/Jott2121/attrition-risk-ml) · [live demo](https://hr-attrition-predictor-jotterson.streamlit.app/)
 Explainable ML for retention-risk modeling. Three models benchmarked (Logistic Regression, Random Forest, XGBoost) under 5-fold stratified CV; the well-specified linear model wins on this sample size, and the writeup says why. Per-prediction SHAP attributions, surfaced in a multi-page Streamlit dashboard.
 
-### [pay-equity-regression](https://github.com/Jott2121/pay-equity-regression)
-Regression-based equity audit — a two-stage OLS model on log-pay that isolates unexplained variation after controlling for level, function, location, tenure, and performance, with residual drilldown and budget-aware remediation modeling (statsmodels).
-
-### [funnel-disparity-stats](https://github.com/Jott2121/funnel-disparity-stats)
+### [funnel-disparity-stats](https://github.com/Jott2121/funnel-disparity-stats) · [live demo](https://hiring-funnel-analytics-jotterson.streamlit.app/)
 Multi-stage funnel conversion analytics with statistical disparity detection — a two-proportion z-test and 4/5ths-rule screening run over cohort data to flag stages where pass-rate gaps cross significance.
+
+More analytics: [workforce-planning-demand-forecast](https://github.com/Jott2121/workforce-planning-demand-forecast) ([live demo](https://workforce-planning-jotterson.streamlit.app/)) · [pay-equity-regression](https://github.com/Jott2121/pay-equity-regression) · [ai-career-threat-index](https://github.com/Jott2121/ai-career-threat-index)
 
 ## How I work — Fleet Mode
 
-Default to a single agent; fan out only for read-heavy parallel work that demonstrably earns it (adding agents has a negative average payoff). Writes stay single-threaded; deterministic machine checks run first, then an independent refute-first reviewer that no agent grades for itself — the gate fails closed, irreversible acts are human-gated, and every run logs a receipt with the real number.
+Default to a single agent; fan out only for read-heavy parallel work that demonstrably earns it (adding agents has a negative average payoff). Writes stay single-threaded; deterministic machine checks run first, then an independent refute-first reviewer that no agent grades for itself — the gate fails closed, irreversible acts are human-gated, and every run logs a receipt with the real number. Packaged as a live skill: [fleet-mode](https://github.com/Jott2121/fleet-mode).
 
 ## Background
 
-A decade shipping production ML/data tools at Oracle, Amazon, and Lockheed — against messy, governed real-world data: benchmarked classifiers with SHAP explainability, regression-based audits with residual analysis, and statistical inference (two-proportion z-tests, the 4/5ths rule). The constraints were real — review, governance, consequences — which is why the agent work above is grounded against the wall, not on a whiteboard.
+A decade in talent and org leadership at Oracle, Amazon, and Lockheed Martin Space — hiring and scaling teams inside messy, governed, high-consequence environments. I came to AI as an operator, not an ML engineer, and I build accordingly: I own the architecture, the evals, and the gates, and I direct AI to do the typing. The applied ML/data work here is mine — SHAP-explained classifiers, regression-based audits, two-proportion z-tests and the 4/5ths rule — built and gated against real constraints, not on a whiteboard.
 
 ## Links
 
