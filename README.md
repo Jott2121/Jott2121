@@ -14,7 +14,7 @@ Production agent infrastructure and applied ML/data tools that run, not slide de
 An all-Claude (Opus 4.8) chief-of-staff agent I architected, built, and run — reachable from my phone, at ≈ $0/mo marginal cost. A single always-on daemon wraps the headless `claude -p` CLI as first-party usage, routes phone messages, runs autonomous builds, fires scheduled routines, and self-heals. Built and adversarially reviewed by fleets of Claude subagents I directed and gated; an independent QC pass caught a soft-lock the happy-path tests never saw. Sanitized engineering case study — receipts over hype.
 
 ### [agent-gate](https://github.com/Jott2121/agent-gate)
-A fail-closed quality gate for agent workflows, shipped as an installable MCP server (`pip install mcp-agent-gate`). Work doesn't pass on a hope — it passes a deterministic check, and every run writes a hash-chained, tamper-evident receipt. 17 tests, including tests that exercise the MCP tools, not just import them.
+A fail-closed quality gate for agent workflows, shipped as an installable MCP server (`pip install mcp-agent-gate`). Work doesn't pass on a hope — it passes a deterministic check, and every run writes a hash-chained, tamper-evident receipt. 19 tests, including tests that exercise the MCP tools, not just import them.
 
 ### [rag-guard](https://github.com/Jott2121/rag-guard)
 A guarded RAG pipeline that refuses when the retrieved context doesn't support an answer: groundedness check, PII redaction, and an eval harness. Published eval run with its misses named instead of hidden — refusal accuracy 0.90, grounded rate 0.88. Stdlib core, bring your own model.
@@ -33,6 +33,19 @@ More analytics: [workforce-planning-demand-forecast](https://github.com/Jott2121
 ## How I work — Fleet Mode
 
 Default to a single agent; fan out only for read-heavy parallel work that demonstrably earns it (adding agents has a negative average payoff). Writes stay single-threaded; deterministic machine checks run first, then an independent refute-first reviewer that no agent grades for itself — the gate fails closed, irreversible acts are human-gated, and every run logs a receipt with the real number. Packaged as a live skill: [fleet-mode](https://github.com/Jott2121/fleet-mode).
+
+## Engineering practices
+
+The bar I'd set for a team, enforced on my own repos. Every flagship project ships with:
+
+- **CI on every push** — multi-version test matrices (Python 3.9–3.13).
+- **Coverage-gated builds** — the build fails if coverage drops below the floor, so the suite can't quietly rot (rag-guard 99%, agent-gate 97%, agent-cost-attribution 96%).
+- **CodeQL static analysis** — `security-extended` queries on every push, PR, and weekly.
+- **Dependabot** — automated dependency and Actions updates, with security alerts on.
+- **Pinned supply chain** — every GitHub Action pinned to a commit SHA.
+- **Protected `main` + a security policy** — nothing merges until the checks pass; private vulnerability reporting enabled on each repo.
+
+Receipts, not claims: every badge is backed by a gate that actually runs and can fail.
 
 ## Background
 
