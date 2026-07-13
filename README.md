@@ -88,7 +88,7 @@ the same prominence as the positive result.** An earlier run showed a huge effec
 traced it to silent output truncation — an instrument artifact, not a model difference. That autopsy,
 and the fail-closed instrumentation built from it, is the real finding.
 
-`307 tests · 99.3% mutation score on its own code · $0 metered on a Claude subscription`
+`332 tests · 99% mutation score on its own code (982 mutants, 5 documented survivors) · $0 metered on a Claude subscription`
 
 ### [bow](https://github.com/Jott2121/bow) — the system that runs on all of it
 An always-on, self-healing chief-of-staff agent I architected, built, and **operate** — reachable from
