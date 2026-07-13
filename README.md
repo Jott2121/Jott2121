@@ -3,7 +3,7 @@
 </div>
 
 <p align="center">
-  <a href="https://github.com/Jott2121/crucible"><img alt="mutation score" src="https://img.shields.io/badge/mutation_score-99.3%25-34D399?style=flat-square&labelColor=0F172A"></a>
+  <a href="https://github.com/Jott2121/crucible"><img alt="mutation score" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Jott2121/crucible/badges/mutation.json&style=flat-square&labelColor=0F172A"></a>
   <a href="https://github.com/Jott2121?tab=repositories"><img alt="CI" src="https://img.shields.io/badge/CI-every_push-38BDF8?style=flat-square&labelColor=0F172A"></a>
   <a href="https://github.com/Jott2121"><img alt="CodeQL" src="https://img.shields.io/badge/CodeQL-security--extended-818CF8?style=flat-square&labelColor=0F172A"></a>
   <a href="https://github.com/Jott2121"><img alt="supply chain" src="https://img.shields.io/badge/actions-SHA--pinned-FBBF24?style=flat-square&labelColor=0F172A"></a>
@@ -140,7 +140,7 @@ The gates I'd set for a team, enforced on my own work — and every one of them 
 |---|---|
 | **CI on every push** | Multi-version matrices where they earn it: 3.11–3.13 across the agent core, 3.9–3.12 on agent-cost-attribution. |
 | **Coverage-gated builds** | The build **fails** below the floor, so the suite can't quietly rot. |
-| **Mutation-gated** | crucible runs against its own code: **913 mutants, 907 killed, 6 survivors — every one triaged and documented.** |
+| **Mutation-gated** | crucible runs against its own code: **982 mutants, 977 killed, 5 survivors — every one triaged and documented.** |
 | **CodeQL** | `security-extended` queries on every push, PR, and weekly. |
 | **Pinned supply chain** | Every GitHub Action pinned to a commit SHA. Dependabot on. |
 | **Protected `main`** | Nothing merges until checks pass. Private vulnerability reporting enabled. |
