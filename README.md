@@ -117,6 +117,13 @@ A per-stage token/$ waterfall plus a detector for runs that report success while
 workflow's cost by **67%**. Honest part: the meter **overturned my own plan** — I assumed fetching was the
 cost whale; the telemetry proved it was the verify step.
 
+### [claude-md-ab](https://github.com/Jott2121/claude-md-ab) — what a verified CLAUDE.md is worth to an agent
+A pre-registered A/B: the same agent, the same six repos, with and without a verified context map.
+**Mapped won 6/6 on turns, tokens, and cost — median tokens −68%, median turns −71% — against ~190
+tokens of map (~450:1 leverage).** Protocol, metrics, and decision rule were committed before any
+run, because I wanted the mapped arm to win and pre-registration is the defense. Honest part:
+**n=6, one run per cell, orientation-shaped prompt** — the README says so before it says anything else.
+
 <details>
 <summary><b>Applied ML &amp; analytics</b> — SHAP-explained classifiers, regression audits, live demos</summary>
 
