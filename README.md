@@ -166,8 +166,10 @@ Packaged as a live skill: **[fleet-mode](https://github.com/Jott2121/fleet-mode)
 
 ## Background
 
-A decade in talent and organizational leadership at Oracle, Amazon, and Lockheed Martin Space — hiring
-and scaling teams inside messy, governed, high-consequence environments. USMC infantry veteran.
+By day I'm the AI Foundations Lead at Lockheed Martin, building the governance, evaluation, and cost foundations that let analytics teams use frontier AI. Before that: twelve years in talent and workforce
+analytics at Lockheed Martin, Amazon, and Oracle. USMC infantry veteran.
+
+Everything on this profile is personal work, built on my own time and equipment.
 
 I came to AI as an operator, not an ML engineer, and I build accordingly: I own the architecture, the
 evals, and the gates, and I direct AI to do the typing. The applied ML and statistics here are mine —
