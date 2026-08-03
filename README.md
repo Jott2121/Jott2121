@@ -7,7 +7,7 @@
   <a href="https://github.com/Jott2121?tab=repositories"><img alt="CI" src="https://img.shields.io/badge/CI-every_push-38BDF8?style=flat-square&labelColor=0F172A"></a>
   <a href="https://github.com/Jott2121"><img alt="CodeQL" src="https://img.shields.io/badge/CodeQL-security--extended-818CF8?style=flat-square&labelColor=0F172A"></a>
   <a href="https://github.com/Jott2121"><img alt="supply chain" src="https://img.shields.io/badge/actions-SHA--pinned-FBBF24?style=flat-square&labelColor=0F172A"></a>
-  <a href="https://www.linkedin.com/in/jeffotterson/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-connect-0A66C2?style=flat-square&labelColor=0F172A"></a>
+  <a href="https://www.linkedin.com/in/jeff-otterson/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-connect-0A66C2?style=flat-square&labelColor=0F172A"></a>
 </p>
 
 ---
@@ -179,7 +179,7 @@ experiments with pre-registered protocols — built against real constraints, no
 <br>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/jeffotterson/">LinkedIn</a>
+  <a href="https://www.linkedin.com/in/jeff-otterson/">LinkedIn</a>
   &nbsp;·&nbsp;
   <a href="https://github.com/Jott2121?tab=repositories">All repositories</a>
 </p>
