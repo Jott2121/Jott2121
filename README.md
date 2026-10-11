@@ -135,7 +135,7 @@ run, because I wanted the mapped arm to win and pre-registration is the defense.
 | [funnel-disparity-stats](https://github.com/Jott2121/funnel-disparity-stats) | Two-proportion z-test and 4/5ths-rule screening, flagging funnel stages where pass-rate gaps cross significance. | [demo](https://hiring-funnel-analytics-jotterson.streamlit.app/) |
 | [workforce-planning-demand-forecast](https://github.com/Jott2121/workforce-planning-demand-forecast) | Capacity modeling, attrition-adjusted supply, time-to-fill simulation. | [demo](https://workforce-planning-jotterson.streamlit.app/) |
 | [pay-equity-regression](https://github.com/Jott2121/pay-equity-regression) | Controlled OLS with residual drilldown and budget-aware remediation scenarios. | — |
-| [ai-career-threat-index](https://github.com/Jott2121/ai-career-threat-index) | Open dataset: AI displacement risk across 76 professions, three-factor methodology, quarterly review. | — |
+| [ai-career-threat-index](https://github.com/Jott2121/ai-career-threat-index) | Open dataset: AI displacement risk across 300 professions, four published sub-scores, quarterly review. | — |
 
 </details>
 
@@ -163,6 +163,16 @@ run first, then an independent, refute-first reviewer that no agent grades for i
 closed, irreversible acts are human-gated, and every run logs a receipt with the real number.
 
 Packaged as a live skill: **[fleet-mode](https://github.com/Jott2121/fleet-mode)**.
+
+## How I build with Cursor + Grok Bot
+
+Cloud agents do the coding. I review and merge every one of those PRs.
+
+Each portfolio repo is getting an `AGENTS.md`, Cursor rules, safety hooks, a `BUGBOT.md` review policy, and a verify-receipts skill and CI job that re-derives every published number before merge.
+
+I'm rolling that setup out across the repos. [agent-gate](https://github.com/Jott2121/agent-gate) is the example repo.
+
+Those files are not on agent-gate, or the other portfolio repos, yet.
 
 ## Background
 
