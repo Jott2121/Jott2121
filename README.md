@@ -72,6 +72,16 @@ flowchart TB
 
 ## Featured
 
+### [tripwire](https://github.com/Jott2121/tripwire) — *do AI agents act on data they know is wrong?*
+Pre-registered tests of tool-using agents on engineering data that is wrong, scored by code with no LLM
+judge. On **200 real FAA Service Difficulty Reports** checked against the FAA aircraft registry, grok-4.7
+and Muse Spark Open **flagged the conflict on 97–99% of real mismatches, then refused or escalated on only
+0–2%.** They saw it and answered anyway. A one-sentence "check your data" prompt moved grok-4.7 to **84%
+correct, at 21% false alarms** on clean records; Muse Spark Open went from 0% to 3%. Honest part: two
+models, one run per item, and most of the mismatches are serial numbers.
+
+`800 scored runs · $7.86 · preregistration frozen before the first scored run`
+
 ### [crucible](https://github.com/Jott2121/crucible) — *your AI wrote the tests. Who tested the tests?*
 
 Coverage measures what **ran**, not what would be **caught**. On a real module with a fully green
