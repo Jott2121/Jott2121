@@ -12,55 +12,24 @@
 
 I run a small engineering team where every engineer is a model. One frontier model holds the lead
 seat: it plans, briefs, and reviews, and it doesn't do the typing. Scoped builders write the code.
-Cheaper models do the reading. Nothing ships until a deterministic check and an independent
+Cheaper models do the reading. A model from a different lab checks the high-stakes claims. Nothing ships until a deterministic check and an independent
 reviewer both pass, and nothing irreversible happens without my explicit yes.
 
 Then I measure what agents like these get wrong, and publish it, including the nulls.
 
 ## How I work
 
-```mermaid
-flowchart TB
-    ME(["<b>Me</b><br/>intent · architecture · the final call"])
-    LEAD["<b>Lead seat · Fable 5.1</b><br/>plans · briefs · reviews · synthesizes<br/><i>judgment, not typing</i>"]
-    BUILD["<b>Builders · Opus 5.5</b><br/>scoped spec · single writer<br/><i>max two in flight</i>"]
-    LABOR["<b>Labor · Sonnet / Haiku</b><br/>read-heavy fan-out<br/><i>sweeps · extraction · drafts</i>"]
-    CHECK["<b>Deterministic checks</b><br/>tests · CI · receipts recomputed<br/><i>fail closed</i>"]
-    REVIEW["<b>Independent reviewer</b><br/>refute-first · at most six hand-aimed mutants<br/><i>hunts code that is correct and still lies</i>"]
-    HUMAN["<b>Human gate</b><br/>push · publish · send · spend<br/><i>waits for my explicit yes</i>"]
-    SHIP["<b>Ship, then verify the live effect</b><br/><i>a claim of live needs a check, not a hope</i>"]
-    MEM[("<b>Memory flywheel</b><br/>sessions mined into script › CLAUDE.md › skill › memory")]
-
-    ME --> LEAD
-    LEAD -->|"full brief: files · constraints · the why"| BUILD
-    LEAD -->|fan-out reads| LABOR
-    LABOR -.->|findings| LEAD
-    BUILD --> CHECK
-    CHECK --> REVIEW
-    REVIEW -->|"finding or surviving mutant: one test"| BUILD
-    REVIEW -->|clean| HUMAN
-    HUMAN --> SHIP
-    SHIP --> MEM
-    MEM -.->|"verified context, next session"| LEAD
-
-    classDef me    fill:#F1F5F9,stroke:#0F172A,stroke-width:2px,color:#0F172A
-    classDef seat  fill:#DBEAFE,stroke:#3B82F6,stroke-width:2px,color:#0F172A
-    classDef gate  fill:#EDE9FE,stroke:#8B5CF6,stroke-width:2px,color:#0F172A
-    classDef human fill:#FEE2E2,stroke:#EF4444,stroke-width:2px,color:#0F172A,stroke-dasharray:4 3
-    classDef ship  fill:#D1FAE5,stroke:#10B981,stroke-width:2px,color:#0F172A
-    classDef mem   fill:#FEF3C7,stroke:#F59E0B,stroke-width:2px,color:#0F172A
-    class ME me
-    class LEAD,BUILD,LABOR seat
-    class CHECK,REVIEW gate
-    class HUMAN human
-    class SHIP ship
-    class MEM mem
-```
+<p align="center">
+  <img src="./assets/loop.svg" alt="Seats and gates: I set intent and make the final call. A frontier model in the lead seat plans, briefs, and reviews; scoped builders write the code, two at a time; cheaper models do the reads. Builds pass deterministic checks, then a refute-first reviewer; a surviving mutant goes back with one test. A human gate on push, publish, send, and spend closes only on my yes. Then ship, verify the live effect, and remember, so the next session starts with verified context." width="100%">
+</p>
 
 **Seats.** The lead seat is for judgment: plans, architecture calls, briefs, adversarial review,
-synthesis. Builds go to Opus 5.5 workers, briefed once and completely (files, constraints,
-acceptance criteria, and *why*) so there is no launch-wait-rebrief loop. Sweeps and drafts go to the
-cheapest model that can do them. The lead reviews every worker's output before anything is called done.
+synthesis. Builders get one complete brief (files, constraints, acceptance criteria, and *why*) so
+there is no launch-wait-rebrief loop. Sweeps and drafts go to the cheapest model that can do them.
+The lead reviews every worker's output before anything is called done. As of November 2026 the
+roster is Fable 5.1 in the lead seat, Opus 5.5 building, and Sonnet and Haiku reading. Grok builds
+alongside them on aviation-data projects, and Grok and GPT models are the different-lineage
+reviewers when a claim is high-stakes. The seats outlast the models.
 
 **Gates.** Machine checks run first and fail closed. Then a separate reviewer agent tries to refute
 the change. It ranks findings by *"if this is wrong, how would we find out?"* and aims a handful of
@@ -84,7 +53,7 @@ mine of 415 of my own sessions:
 | `gauges` | Context, 5-hour, and weekly budget in the status line, with alerts at thresholds |
 | `wiki-log` | After milestone work, logs it to the right knowledge vault in that vault's own conventions |
 
-On the portfolio repos, cloud agents in Cursor open PRs under each repo's `AGENTS.md` and a
+On the portfolio repos, Cursor and Grok cloud agents open PRs under each repo's `AGENTS.md` and a
 `BUGBOT.md` review policy. On most of them a CI job recomputes the published numbers from raw run
 files before merge, and I merge every PR by hand. [agent-gate](https://github.com/Jott2121/agent-gate)
 is the reference repo.
